@@ -61,11 +61,19 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     z-index: 1;
 }
 </style>
+	
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
+	
+<script>
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0, 0, 150, 75);
+</script>
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
