@@ -45,7 +45,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 })()
 	
-function init () {
+function drawrectangle () {
   // set our config variables
   canvas = document.getElementById('myCanvas')
   ctx = canvas.getContext('2d')
@@ -98,8 +98,7 @@ function init () {
 	     
 	<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
 	
-	<a href="#results" onclick=";" class="w3-btn w3-black"> Yes </a>
-	<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a onclick="drawrectangle;" class="w3-btn w3-black"> Draw a Rectangle </a>
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
