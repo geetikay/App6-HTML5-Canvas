@@ -57,13 +57,17 @@ function writeName(){
 	const ctx = canvas.getContext('2d');
 	
 	ctx.font = "30px Arial";
-	ctx.fillText("Geetika Yelugoti", 10, 50);
+	ctx.fillText("Geetika Yelugoti", 50, 50);
 }
 
 function addImage(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
+	const img = documnet.createElement("img");
+	img.src = "ut.jpg";
+	
+	ctx.drawImage(img);
 	
 }
 	
