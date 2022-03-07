@@ -17,10 +17,9 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Contains canvas and 4 buttons below it. One button adds a rectangle to the canvas. One button adds my name to the canvas. One button adds an image to the canvas. The last button clears the elements in the canvas. 
  
-Known Issues:
-blah, blah, blah, blah
+Known Issues: n/a
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -40,41 +39,44 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
-
+const canvas = document.getElementById('myCanvas'); //declares variable that returns the canvas object based on the ID myCanvas
+const ctx = canvas.getContext('2d'); //declares variable that returns a 2-dimnesional drawing context on the canvas
+	
+//function that draws a filled in rectangle in the canvas
 function drawRectangle(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
-	ctx.rect(10, 20, 150, 100);
-	ctx.fill();
+	ctx.rect(10, 20, 150, 100); //arguments contain the locations of the corners of the rectangle
+	ctx.fill(); //fill in the rectangle 
 }
 
-	
+//function that adds text in the canvas	
 function writeName(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
-	ctx.font = "30px Arial";
-	ctx.fillText("Geetika Yelugoti", 10, 50);
+	ctx.font = "30px Arial"; //specifies font and font size of text in canvas 
+	ctx.fillText("Geetika Yelugoti", 10, 50); //specifies text and location of text in canvas, creates solid text 
 }
 
+//function adds an image of UT to the canvas
 function addImage(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
-	const img = document.createElement("img");
-	img.src = "ut.jpg";
+	const img = document.createElement("img");//creates image element 
+	img.src = "ut.jpg"; //sets image object as the specifc UT image 
 	
-	ctx.drawImage(img, 10, 10, 100, 100);	
+	ctx.drawImage(img, 10, 10, 100, 100); //puts image in canvas with corner at defined by first two arguments and dimensions defined by second two arguments
 }
-	
+
+//function that clears the canvas
 function clearCanvas(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.clearRect(0, 0, canvas.width, canvas.height); //clears all canvas space (as defined by arguments)
 }
 	
 </script>
@@ -100,7 +102,7 @@ function clearCanvas(){
     z-index: 1;
 }
 </style>
-	
+
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
@@ -114,14 +116,16 @@ function clearCanvas(){
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION. THIS IS A NEW CODE</p>
 	
 	<div>
-	     
-	<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"> </canvas>
+	  
+	<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"> </canvas> 
 	
 	</div>
 	
 	<div>
 	     
-		<a href="#" onclick="drawRectangle();" class="w3-btn w3-black"> Draw a Rectangle </a>
+	<!-- Buttons: href: # followed by nothing indicates that there is no URL redirection. Function following onclick handler is carried out when the button is clicked.  -->
+		
+		<a href="#" onclick="drawRectangle();" class="w3-btn w3-black"> Draw a Rectangle </a> 
 		<a href="#" onclick="writeName();" class="w3-btn w3-black"> Write my Name </a>
 		<a href="#" onclick="addImage();" class="w3-btn w3-black"> Add an Image </a>
 		<a href="#" onclick="clearCanvas();" class="w3-btn w3-black"> Clear Canvas </a>
