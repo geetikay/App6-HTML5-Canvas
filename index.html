@@ -40,39 +40,38 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 
-const canvas = document.getElementById('myCanvas')
-const ctx = canvas.getContext('2d')
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
 
 function drawRectangle(){
-	const canvas = document.getElementById('myCanvas')
-	const ctx = canvas.getContext('2d')
+	const canvas = document.getElementById('myCanvas');
+	const ctx = canvas.getContext('2d');
 	
-	ctx.rect(10, 20, 150, 100)
+	ctx.rect(10, 20, 150, 100);
 	ctx.fill();
-	return false;
 }
 
 	
 function writeName(){
-	const canvas = document.getElementById('myCanvas')
-	const ctx = canvas.getContext('2d')
+	const canvas = document.getElementById('myCanvas');
+	const ctx = canvas.getContext('2d');
 	
-	ctx.font = "30px Arial"
-	ctx.fillText("Geetika Yelugoti", 10, 50)
+	ctx.font = "30px Arial";
+	ctx.fillText("Geetika Yelugoti", 10, 50);
 }
 
-//function addImage(){
-	//const canvas = document.getElementById('myCanvas')
-	//const ctx = canvas.getContext('2d')
+function addImage(){
+	const canvas = document.getElementById('myCanvas');
+	const ctx = canvas.getContext('2d');
 	
 	
-//}
+}
 	
 function clearCanvas(){
-	const canvas = document.getElementById('myCanvas')
-	const ctx = canvas.getContext('2d')
+	const canvas = document.getElementById('myCanvas');
+	const ctx = canvas.getContext('2d');
 	
-	ctx.clearRect(0, 0, canvas.width, canvas.height)
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 	
 </script>
