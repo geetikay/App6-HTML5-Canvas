@@ -64,10 +64,10 @@ function addImage(){
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
 	
-	const img = document.createElement("img");
+	const img = document.createElement("img").width = "300";
+	const img = document.createElement("img").height = "300";
+	
 	img.src = "ut.jpg";
-	img.height = 100;
-    	img.width = 100;
 	
 	ctx.drawImage(img, 10, 10);
 	
